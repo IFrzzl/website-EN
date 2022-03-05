@@ -4,7 +4,7 @@ $("#down-arrow").click(function () {
 	$("#down-arrow").addClass("arrow-rotate-animation");
 });
 $("#down-arrow").on(
-	"animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd",
+	"animationend webkitAnimationEnd onAnimationEnd MSAnimationEnd",
 	function () {
 		$(this).removeClass("arrow-rotate-animation");
 	}
