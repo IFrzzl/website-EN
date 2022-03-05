@@ -41,6 +41,7 @@ function darkmode() {
 }
 
 $(window).load(function(){
+	alert("cheese");
 	$("#cover").addClass("sundown");
 });
 $("#cover").addClass("sundown");
