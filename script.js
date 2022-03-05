@@ -12,19 +12,19 @@ $("#down-arrow").on(
 //--------------------------
 //Dropdown code
 
-$("#drop-btn").click(function () {
+function dropdown(){
 	$("#dropdown").show();
 	document.addEventListener(
 		"mouseup",
 		function (event) {
 			if (!event.target.classList.contains("dropdown-content")) {
 				$("#dropdown").hide();
-			}
+			};
 		},
 		true
 	);
 	document.removeEventListener("mouseup", function (event) {}, true);
-});
+};
 
 function darkmode() {
 	if ($("#circle").hasClass("light")) {
@@ -39,11 +39,3 @@ function darkmode() {
 	}
 }
 
-$(window).on('load', function(){
-	alert("cheese");
-	$("#cover").addClass("sundown");
-});
-$("#cover").addClass("sundown");
-$("#darkmode-btn").click(function () {
-	darkmode();
-});
