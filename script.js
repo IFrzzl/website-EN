@@ -40,7 +40,7 @@ function darkmode() {
 	}
 }
 
-$(window).load(function(){
+$(window).on('load', function(){
 	alert("cheese");
 	$("#cover").addClass("sundown");
 });
