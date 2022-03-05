@@ -40,6 +40,9 @@ function darkmode() {
 	}
 }
 
+$(window).load(function(){
+	$("#cover").addClass("sundown");
+});
 $("#cover").addClass("sundown");
 $("#darkmode-btn").click(function () {
 	darkmode();
