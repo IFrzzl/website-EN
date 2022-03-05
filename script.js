@@ -1,14 +1,13 @@
 //Langing Bar skip content animation
 
-$("#down-arrow").click(function () {
+function arrowanimate(){
 	$("#down-arrow").addClass("arrow-rotate-animation");
-});
 $("#down-arrow").on(
 	"animationend webkitAnimationEnd onAnimationEnd MSAnimationEnd",
 	function () {
 		$(this).removeClass("arrow-rotate-animation");
 	}
-);
+)};
 
 //--------------------------
 //Dropdown code
