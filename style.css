@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
+
+:root {
+	--lightblue: #b8bacb;
+	--red: #b3082b;
+}
+
+html {
+	scroll-behaviour: smooth;
+	overflow-x: hidden;
+}
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background-color: black;
+}
+
+li,
+p,
+a {
+	font-family: "Fredoka", sans-serif;
+}
+
+li img {
+	max-height: 40px;
+}
+
+.darkmode {
+	background: linear-gradient(black, black) !important;
+	color: white;
+}
+
+#header {
+	position: absolute;
+	display: flex;
+	justify-content: flex-start;
+	gap: 5%;
+	background-color: black;
+	min-height: 80px;
+	width: 100vw;
+	z-index: 1;
+}
+
+#header.darkmode,
+.box.darkmode,
+#intro-bar.darkmode {
+	border-bottom: 5px solid white;
+}
+#logo {
+	height: 80px;
+	background-color: black;
+	margin-left: 10%;
+}
+
+#links {
+	display: flex;
+	list-style: none;
+	text-align: center;
+	align-items: center;
+	padding-left: 0;
+	padding-right: 10%;
+	margin-left: auto;
+}
+
+#links li {
+	display: inline;
+	padding: 0 10px;
+	color: white;
+	font-size: 1.25em;
+	transition: 0.5s;
+	line-height: 10px;
+}
+
+#links li:hover {
+	color: var(--red);
+}
+
+#links li::selection,
+button::selection {
+	background-color: var(--red);
+	color: white;
+}
+
+#dropdown {
+	position: absolute;
+	height: 0;
+	right: 95px;
+	top: 66.5px;
+	z-index: 1;
+	display: none;
+}
+
+#dropdown.darkmode ul,
+#dropdown.darkmode ul > * {
+	background-color: #222;
+}
+#dropdown ul {
+	display: flex;
+	flex-flow: row wrap;
+	background-color: white;
+	list-style: none;
+	padding: 0;
+	width: 200px;
+}
+
+#dropdown ul li {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	height: 35px;
+	width: 100px;
+}
+
+.flags {
+	float: left;
+	max-height: 35px;
+}
+#dropdown:hover,
+#dropdown li:hover {
+	background-color: #eee;
+}
+#intro-bar {
+	display: flex;
+	flex-direction: row no-wrap;
+	align-items: center;
+	justify-content: space-between;
+	height: 100vh;
+	width: 100vw;
+	whitespace: pre-wrap;
+	background: linear-gradient(135deg, var(--red) 0 65%, black 65% 100%);
+}
+#intro-bar p,
+h1 {
+	margin: 0 10%;
+	color: white;
+	width: 300px;
+}
+
+#intro-bar p::selection,
+span::selection {
+	background-color: black;
+}
+
+#bigname {
+	font-size: 4em;
+	background: linear-gradient(white, white) center 90% no-repeat;
+	background-size: 75% 4px;
+}
+
+#introsquare {
+	width: 200px;
+	height: 200px;
+	margin-right: calc(35vw - 210px);
+	transform: rotate(45deg);
+	background-color: white;
+}
+
+#introsquare img {
+	height: 200px;
+	transform: rotate(-45deg);
+}
+
+#down-arrow {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, calc(100vh - 75px));
+}
+
+.arrow-rotate-animation {
+	animation: rotate-arrow 0.25s linear;
+}
+
+@keyframes rotate-arrow {
+	0% {
+		transform: translate(-50%, calc(100vh - 75px));
+	}
+	50% {
+		transform: translate(-50%, calc(100vh - 75px)) rotate(180deg);
+	}
+	100% {
+		transform: translate(-50%, calc(100vh - 75px)) rotate(360deg);
+	}
+}
+
+.box {
+	background: linear-gradient(90deg, white 80%, var(--red) 0%);
+	margin: 20px 0;
+	padding: 20px 0;
+}
+
+.box > * {
+	margin: 0 10%;
+}
+#about {
+	max-width: 600px;
+}
+#footer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 5%;
+	background-color: black;
+	flex: 1;
+}
+
+#footer img {
+	margin-right: 10vw;
+	height: 40px;
+	padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+	.box {
+		background: linear-gradient(white, white);
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.bigname {
+		font-size: 2.5em;
+	}
+}
+@media only screen and (max-width: 750px) {
+	#introsquare,
+	#introsquare img {
+		width: 120px;
+		height: 120px;
+		margin-right: calc(35vw - 170px);
+	}
+}
+@media only screen and (max-width: 650px) {
+	#introsquare,
+	#introsquare img {
+		width: 0px;
+	}
+}
+@media only screen and (max-width: 350px) {
+	#logo {
+		display: none;
+	}
+	#intro-bar p {
+		width: 200px;
+	}
+	#dropdown ul {
+		width: 100px;
+	}
+}
